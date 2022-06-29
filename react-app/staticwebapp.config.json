@@ -7,10 +7,28 @@
     {
       "route":  "/api/products/*",
       "allowedRoles": ["authenticated"]
-    },
-    {
-      "route": "/.auth/login/twitter",
-      "statusCode": 404
     }
-  ]
+  ],
+  "auth": {
+    "identityProviders": {
+      "customOpenIdConnectProviders": {
+        "keycloak": {
+          "registration": {
+            "clientIdSettingName": "KEYCLOAK_CLIENT_ID",
+            "clientCredential": {
+              "clientSecretSettingName": "KEYCLOAK_CLIENT_SECRET"
+            },
+            "openIdConnectConfiguration": {
+              "wellKnownOpenIdConfiguration": "https://localhost:8080/.well-known/openid-configuration"
+            }
+          },
+          "login": {
+            "nameClaimType": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
+            "scopes": [],
+            "loginParameterNames": []
+          }
+        }
+      }
+    }
+  }
 }

@@ -10,7 +10,7 @@ const NavBar = (props) => {
     })();
   }, []);
 
-  const providers = ['twitter', 'github', 'aad'];
+  const providers = ['keycloak'];
 
   const redirect = window.location.pathname;
 
