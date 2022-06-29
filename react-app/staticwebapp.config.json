@@ -19,7 +19,7 @@
               "clientSecretSettingName": "KEYCLOAK_CLIENT_SECRET"
             },
             "openIdConnectConfiguration": {
-              "wellKnownOpenIdConfiguration": "https://localhost:8080/auth/realms/myrealm/.well-known/openid-configuration"
+              "wellKnownOpenIdConfiguration": "https://localhost:8080/realms/myrealm/.well-known/openid-configuration"
             }
           },
           "login": {
